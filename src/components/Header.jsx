@@ -3,9 +3,10 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-            <h1>UK CRIME </h1>
-            
-            
+           <div>
+            <h1>UK POLICE </h1>
+            </div>
+
         </div>
     );
 };
