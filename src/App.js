@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
+import {BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Home from './components/Home';
@@ -30,9 +30,9 @@ function App() {
             <Workforce />
           </Route>
         </Switch>
+        <Footer />
       </div>
-      <Footer />
-  </Router>
+      </Router>  
   );
 }
 
