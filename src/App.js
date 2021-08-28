@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Statistics from './components/Statistics';
 import CrimeMap from './components/CrimeMap';
 import Workforce from './components/Workforce';
-import Footer from './components/Workforce';
+import Footer from './components/Footer';
 
 
 
@@ -23,10 +23,10 @@ function App() {
           <Route path="/statistics">
             <Statistics />
           </Route>
-          <Route path="/CrimeMap">
+          <Route path="/map">
             <CrimeMap />
           </Route>
-          <Route path="/Workforce">
+          <Route path="/workforce">
             <Workforce />
           </Route>
         </Switch>

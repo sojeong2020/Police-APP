@@ -4,11 +4,13 @@ const policeApi = axios.create({
     baseURL: 'https://data.police.uk/api',
 });
 
+
+
 export const getCategories = () => {
     return policeApi
-    .get('/forces')
+    .get('/crime-categories')
     .then((response)=>{
         console.log(response)
-        return response.data.forces;
+        return response.data;
     });
 };
