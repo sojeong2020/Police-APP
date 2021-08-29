@@ -5,13 +5,13 @@ import { getPostCode} from '../utils/api';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 const Home = () => {
-   const [postCode,setPostCode]=useState([]);
-
-  /*  const {setPostCode} = useContext(PostCodeContext);  */
+   const [location,setLocation]=useState([]);
+   const {setPostCode} = useContext(PostCodeContext);  
+   console.log(location,"location from Home.jsx")
 
    useEffect(()=>{
     getPostCode().then((postCodeFromApi)=>{
-               setPostCode(postCodeFromApi)
+               setLocation(postCodeFromApi)
       })
   },[])
 
@@ -19,7 +19,7 @@ const Home = () => {
     return (
         
     <div>
-      <p>{postCode.admin_ward}</p>
+      <p>{location.admin_ward}</p>
           <h1>What's happening in your area?</h1>
           <h2>Find your local area </h2>
           <input></input>
