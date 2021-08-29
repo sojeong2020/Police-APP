@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState,useEffect} from 'react';
-import { getCategories } from '../utils/policeApi';
+import { getCategories } from '../utils/api';
 
 const Statistics = () => {
     const [categories, setCategories] = useState([]);
