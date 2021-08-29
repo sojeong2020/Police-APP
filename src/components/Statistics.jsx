@@ -19,7 +19,7 @@ const Statistics = () => {
             { categories.map((category)=>{
                      return(
                          <li key={category.url}>
-                        ${category.name}
+                        {category.name}
                          </li>
                        );
                  })
