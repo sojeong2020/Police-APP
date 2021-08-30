@@ -5,8 +5,7 @@ const Nav = () => {
     return (
         <div>
             <Link to='/statistics'><h3>Statistics</h3></Link>
-            <Link to='/map'><h3>Crime Map</h3></Link>
-            <Link to='/workforce'><h3>Police Workforce</h3></Link>
+            <Link to='/categories'><h3>Categories</h3></Link>
         </div>
     );
 };
