@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, {useContext} from 'react';
+import { ForceContext } from '../contexts/Force';
+
 import  { Form }  from 'react-bootstrap';
 
 
 const Dates = () => {
-    const [date,setDate]=useState('')
-    console.log(date)
+    /* const [date,setDate]=useState('')
+    console.log(date) */
+
+    const {setDate} = useContext(ForceContext);
+
 
     const handleChange=(event)=>{
         setDate({value:event.target.value}) 
@@ -18,7 +23,7 @@ const Dates = () => {
     return (
         <div>
              <Form value="submit" onSubmit={handleSubmit}>
-               <Form.Label><p>Select Date</p></Form.Label>
+               <Form.Label><h2>Select Date (Required) </h2></Form.Label>
                  <select onChange={handleChange}>
                  <option value="2021-07">2021-07 </option>
                  <option value="2021-06">2021-06 </option>
