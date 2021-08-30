@@ -45,7 +45,7 @@ function App() {
           </Route>
 
           <Route path="/statistics">
-            <Statistics />
+            <Statistics force={force}date={date} />
           </Route>
 
           <Route path="/Categories">

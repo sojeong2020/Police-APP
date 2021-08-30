@@ -10,7 +10,7 @@ console.log(date,"<<<<<from header")
     return (
         <div>
            <div>
-           <Link to='/'><h1>UK Crimes </h1></Link>
+           <Link to='/'><h1>UK STOP & SEARCH </h1></Link>
            </div>
            <div>
                 <h1>{force.value} {date.value}</h1>
