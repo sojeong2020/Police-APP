@@ -1,4 +1,4 @@
-
+import React from 'react';
 import {Link} from 'react-router-dom'
 
 
@@ -11,7 +11,7 @@ const Header = () => {
            <Link to='/'><h1>UK Crimes </h1></Link>
            </div>
            <div>
-               <h1>Force : 2020-07</h1>
+               <h1>Force : 2020-07{}</h1>
            </div>
 
         </div>

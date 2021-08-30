@@ -4,20 +4,6 @@ const policeApi = axios.create({
     baseURL: 'https://data.police.uk/api',
 });
 
-const postcodeApi = axios.create({
-    baseURL: 'https://api.postcodes.io/postcodes',
-});
-
-export const getPostCode = (post) =>{
-    return postcodeApi
-    .get(`/${post}`)
-    .then((response)=>{
-        console.log(response.data.result)
-        console.log(response.data.result.postcode)
-        console.log(response.data.result.longitude)
-    return response.data.result;
-    })
-}
 
 
 export const getCategories = () => {
@@ -38,7 +24,7 @@ export const getForces = () => {
     });
 };
 
-export const getCrimes = () => {
+/* export const getCrimes = () => {
     return policeApi
     .get('/crimes-no-location?category=all-crime&force=leicestershire&date=2019-07')
     .then((response)=>{
@@ -57,4 +43,4 @@ export const getCrimesBy = (category,force,date) => {
         console.log(response.data.length)
         return response.data;
 })
-};
+}; */
