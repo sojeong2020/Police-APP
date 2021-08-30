@@ -4,39 +4,66 @@ import { PostCodeContext } from '../contexts/PostCode';
 import { getPostCode} from '../utils/api';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-const Home = () => {
-   const [location,setLocation]=useState([]);
-   const {setPostCode} = useContext(PostCodeContext);  
+
+
+const Home = (props) => {
+   console.log(props,"<<<props")
+   console.log(props.position,"<<<props.position")
+  
+  const [location,setLocation]=useState([]);
+  const [post,setPost]=useState("");
+
+  const {setPostCode} = useContext(PostCodeContext);  
    console.log(location,"location from Home.jsx")
 
-   useEffect(()=>{
-    getPostCode().then((postCodeFromApi)=>{
-               setLocation(postCodeFromApi)
+  useEffect(()=>{
+  getPostCode(props.post).then((resultFromApi)=>{
+    console.log(resultFromApi,"<<<<getpostfromAPi")
+               setLocation(resultFromApi)
       })
-  },[])
+  },[])  
 
+ const handleSubmit = (event) => {
+    
+    event.preventDefault();
+   
+     
+  }; 
 
+    
+ 
+    
     return (
         
     <div>
-      <p>{location.admin_ward}</p>
-          <h1>What's happening in your area?</h1>
-          <h2>Find your local area </h2>
-          <input></input>
-          
+      
+      <form onSubmit={handleSubmit}>
+       <label>
+       Find your local area
+        <input
+          value={post}
+          onChange={(event) => setPost(event.target.value)}
+        />
+       </label>
+       <button type="submit">search</button>
+      </form>
+
+        
         <div className="Map">
-        <MapContainer center={[52.634407, -1.133653]} zoom={12}>
+        <MapContainer center={props.position}zoom={12} >
+
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-        <Marker position={[52.634407, -1.133653]}>
-        <Popup>
+        <Marker position={props.position}>
+                    
+         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
+        </Popup> 
         </Marker>
         </MapContainer>
-       </div>
+       </div> 
 
     </div> 
           

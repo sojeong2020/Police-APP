@@ -13,21 +13,23 @@ import Footer from './components/Footer';
 
 
 function App() {
+  const [post,setPost]=useState("m342lw")
 
   const [postCode, setPostCode]=useState({
-    "latitude":"53.421759",
-    "longitude": "-2.30875",
-    "admin_ward":"Sale Moor"});
+    "latitude":"53.454168",
+    "longitude": "-2.15228",
+    "admin_ward":"Denton West"});
 
   return (
-    <PostCodeContext.Provider value={{postCode,setPostCode}}>
+    <PostCodeContext.Provider value={{postCode,post,setPostCode,setPost}}>
     <div className="App">
         <Header postCode={postCode} />
         <Nav />
 
         <Switch>
           <Route exact path="/">
-            <Home setPostCode={setPostCode}/>
+            <Home setPostCode={setPostCode} position={[postCode.latitude, postCode.longitude]} admin_ward={postCode.admin_ward}
+            post={post}setPost={setPost}/>
           </Route>
 
           <Route path="/statistics">
