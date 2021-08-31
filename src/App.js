@@ -8,8 +8,8 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Forces from './components/Forces';
 import Dates from './components/Dates';
-import Statistics from './components/Statistics';
-import Categories from './components/Categories';
+import StopSearch from './components/StopSearch';
+import Crimes from './components/Crimes';
 import Footer from './components/Footer';
 
 
@@ -44,12 +44,12 @@ function App() {
             <Dates />
           </Route>
 
-          <Route path="/statistics">
-            <Statistics force={force}date={date} />
+          <Route path="/stop">
+            <StopSearch force={force}date={date} />
           </Route>
 
-          <Route path="/Categories">
-            <Categories />
+          <Route path="/crimes">
+            <Crimes force={force}date={date} />
           </Route>
         </Switch>
 
