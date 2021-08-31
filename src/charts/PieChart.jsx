@@ -1,14 +1,12 @@
 import React from 'react';
-import {Pie} from 'react-chartjs-2';
-
 
 const PieChart = (props) => {
-    const chartData= props.pieData
-    console.log(chartData,"<<<< from piechart")
+    const chartData = props.searchData
+    console.log(chartData,"<<< from piechart")
 
     return (
         <div>
-            <p>I am pieChart !!!</p>
+            <p>I am Pie!</p>
         </div>
     );
 };

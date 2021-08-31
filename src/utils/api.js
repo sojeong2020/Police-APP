@@ -34,3 +34,14 @@ export const getSearchesByForceDate = (force,date) => {
 })
 };   
 
+export const getCrimesByForceDate = (force,date) => {
+
+    let path =`/crimes-no-location?category=all-crime&force=${force}&date=${date}`
+    return policeApi
+    .get(path)
+    .then((response)=>{
+        console.log(response.data)
+        return response.data;
+})
+};   
+
