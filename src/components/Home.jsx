@@ -27,8 +27,8 @@ const Home = () => {
       
       <Forces />
       <Dates />
-      <h3>{searches.length} crimes were reported in {force.value}.</h3>
-
+      <h3>{searches.length} Stop and search was reported in {force.value} in {date.value}.</h3>
+  
     </div>
   );
 };
