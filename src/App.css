@@ -11,9 +11,10 @@
     'content'
     'footer';
   min-height: 100vh;
-  background-color: rgb(1, 4, 37);
+  /* background-color: rgba(46, 49, 49, 0.4); */
+   background-color: rgba(1, 4, 37, 0.4); 
   text-align: center;
-  color:rgb(154, 210, 236);
+  color:rgb(5, 54, 77);
 }
 
 /* ------------------- Home ------------------------------- */

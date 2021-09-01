@@ -4,27 +4,27 @@ import { Bar } from "react-chartjs-2";
  
 
     
-const LineChartCrime = ({force,date}) => {
+const BarChartCrime = ({force,date}) => {
     const [chartData,setChartData]=useState({});
 
-    console.log(chartData,"<<<< chartData from line chart!")
+    //console.log(chartData,"<<<< chartData from line chart!")
 
 
     useEffect(()=>{
         let types=[];
-        console.log(types,"<<< types")
+        //console.log(types,"<<< types")
         
         let counts = {};
 
         getCrimesByForceDate(force.value,date.value).then((resultFromApi)=>{
-            console.log(resultFromApi,"crime before iterating")
+            //console.log(resultFromApi,"crime before iterating")
             
               resultFromApi.forEach(element => {
                   types.push(element.category);
               })
             
              types.forEach(x=>counts[x]=(counts[x] || 0)+1 );
-             console.log(counts,"<<<<< conuts")
+            // console.log(counts,"<<<<< conuts")
             
             setChartData({
                 labels: Object.keys(counts),
@@ -33,7 +33,7 @@ const LineChartCrime = ({force,date}) => {
                     label: "types of crimes",
                     data: Object.values(counts) ,
                     fill: false,
-                    backgroundColor: 'rgb(255, 99, 132)',
+                    backgroundColor: 'rgba(83, 65, 167, 1)',
                     borderColor: 'rgba(255, 99, 132, 0.2)',
                     
                   }
@@ -76,14 +76,7 @@ const LineChartCrime = ({force,date}) => {
     },
   };
   
-
-
-
-
-  
-
-
- return(
+return(
     <Bar data={chartData} options={options}></Bar>
  );
  
@@ -92,4 +85,4 @@ const LineChartCrime = ({force,date}) => {
 
     
 
-export default LineChartCrime;
+export default BarChartCrime;
