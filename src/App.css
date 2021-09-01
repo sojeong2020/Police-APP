@@ -17,23 +17,54 @@
   color:rgb(5, 54, 77);
 }
 
-/* ------------------- Home ------------------------------- */
-/* #mapid { height: 180px; } */
+.Text-link {
+  text-decoration: none;
+  color: inherit;
+}
+.Text-link:hover {
+  color:rgb(62, 124, 240);
+}
 
-.leaflet-container {
+/* ------------------- Header.jsx ------------------------------- */
+
+.Header { 
+  background-color: rgb(3, 10, 46);
+  margin:0px;
+  padding:3px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
   width: 100%;
-  height: 50vh;
+  color:rgb(174, 187, 226);
+
 }
 
-.Map{
-  margin:15px 15px 20px;
+/* ------------------- Nav.jsx ------------------------------- */
+
+.Navbar{
+  background-color: rgb(81, 103, 168);
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+  padding:7px;
+  color:rgb(18, 12, 51);
+  margin-bottom:0;
+  text-decoration: none;
+
 }
+.Nav-span {
+  margin:10px;
+}
+
 
 @media only screen and (min-width: 600px) {
   
-  .Map{
-    margin:30px 100px 40px;
-    align-content: center;
+  .Navbar-link {
+    margin:10px;
+    padding:10px 10px;
   }
   
 }
