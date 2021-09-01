@@ -1,23 +1,34 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome} from '@fortawesome/free-solid-svg-icons'
+
+
 
 
 const Header = ({force,date}) => {
-    
-console.log(force,"<<<<<from header")
-console.log(date,"<<<<<from header")
 
-    return (
-        <div>
-           <div>
-           <Link to='/'><h1>UK POLICE </h1></Link>
-           </div>
-           <div>
-                <h3>{force.value} {date.value}</h3>
-            </div>
+   
 
-        </div>
-    );
-};
+return (
+
+    <header className="Header">
+
+    <div className="Home">
+    <Link className='Text-link' to ="/">
+    <h3> <FontAwesomeIcon icon={faHome} /> UK POLICE </h3>
+    </Link>
+    </div>
+   
+    <div></div>
+     <div className="Home_link">
+     { <h3>{force.value} {date.value}</h3> }
+     </div>
+
+    </header>
+        
+)
+}
+
 
 export default Header;

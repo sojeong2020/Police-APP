@@ -6,7 +6,6 @@ const Footer = () => {
     <footer className="Footer">
     <h5> Copyright &copy; 2021 |
       Sojeong Park
-      
     </h5>
     </footer> 
     </div> 

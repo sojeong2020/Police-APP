@@ -31,7 +31,7 @@ export const getSearchesByForceDate = (force,date) => {
     .then((response)=>{
         //console.log(response.data)
         return response.data;
-})
+    });
 };   
 
 export const getCrimesByForceDate = (force,date) => {
@@ -42,22 +42,6 @@ export const getCrimesByForceDate = (force,date) => {
     .then((response)=>{
        // console.log(response.data)
         return response.data;
-})
+    });
 };   
 
-/* ["All crime",
-    "Anti-social behaviour",
-    "Bicycle theft",
-    "Burglary",
-    "Criminal damage and arson",
-    "Drugs",
-    "Other theft",
-    "Possession of weapons",
-    "Public order",
-    "Robbery",
-    "Shoplifting",
-    "Theft from the person",
-    "Vehicle crime",
-    "Violence and sexual offences",
-    "Other crime"
-    ]  */
