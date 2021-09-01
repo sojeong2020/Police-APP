@@ -1,10 +1,9 @@
 import React ,{useState,useEffect} from 'react';
 import { getSearchesByForceDate } from '../utils/api';
-import { Bar } from "react-chartjs-2";
+import { Radar } from 'react-chartjs-2';
 
-
-const LineChart = ({force,date}) => {
-  const [chartData,setChartData]=useState({});
+const RadarChart = ({force,date}) => {
+    const [chartData,setChartData]=useState({});
     console.log(chartData,"<<<< chartData from radar!")
 
   useEffect(()=>{
@@ -15,10 +14,7 @@ const LineChart = ({force,date}) => {
       getSearchesByForceDate(force.value,date.value).then((resultFromApi)=>{
         console.log(resultFromApi,"searches before iterating from radar")
         resultFromApi.forEach(element => {
-          if(element.age_range !== null) {
             age.push(element.age_range);
-          }
-           
         })
 
         age.forEach(x=>counts[x]=(counts[x] || 0)+1 );
@@ -32,8 +28,8 @@ const LineChart = ({force,date}) => {
                 label: "age range",
                 data: Object.values(counts) ,
                 fill: false,
-                backgroundColor: 'rgba(83, 65, 167, 1)',
-                borderColor: 'rgba(255, 99, 132, 0.2)',
+                backgroundColor: 'rgba(2, 31, 7, 1)',
+                borderColor: 'rgba(7, 110, 25, 1)',
                 borderWidth: 1,
               }
             ]
@@ -42,17 +38,34 @@ const LineChart = ({force,date}) => {
     },[force,date])
 
     const options = {
-         scale: {
+        scale: {
           ticks: { beginAtZero: true },
         }, 
 
-       };
+       /*  scale: {
+            ticks: {
+              min: 0,
+              max: 16,
+              stepSize: 2,
+              showLabelBackdrop: false,
+              backdropColor: "rgba(203, 197, 11, 1)"
+            },
+            angleLines: {
+              color: "rgba(255, 255, 255, .3)",
+              lineWidth: 1
+            },
+            gridLines: {
+              color: "rgba(255, 255, 255, .3)",
+              circular: true
+            }
+          } */
+      };
 
     return (
         <div>
-            <Bar data={chartData} options={options}/> 
+            <Radar data={chartData} options={options}/> 
         </div>
     );
 };
 
-export default LineChart;
+export default RadarChart;

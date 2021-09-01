@@ -1,5 +1,5 @@
 import React  from 'react';
-import LineChartCrime from '../charts/LineChartCrime';
+import BarChartCrime from '../charts/BarChartCrime';
 import DoughnutCrime from '../charts/DoughnutCrime';
 
 const Crimes = ({force,date}) => {
@@ -8,7 +8,7 @@ const Crimes = ({force,date}) => {
         <div>
             
             <h3>Crime types description</h3>
-            <LineChartCrime force={force} date={date} />
+            <BarChartCrime force={force} date={date} />
             <h3>Crimes by outcomes</h3>
             <DoughnutCrime force={force} date={date} />
         </div>
