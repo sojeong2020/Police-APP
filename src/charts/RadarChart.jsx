@@ -42,23 +42,7 @@ const RadarChart = ({force,date}) => {
           ticks: { beginAtZero: true },
         }, 
 
-       /*  scale: {
-            ticks: {
-              min: 0,
-              max: 16,
-              stepSize: 2,
-              showLabelBackdrop: false,
-              backdropColor: "rgba(203, 197, 11, 1)"
-            },
-            angleLines: {
-              color: "rgba(255, 255, 255, .3)",
-              lineWidth: 1
-            },
-            gridLines: {
-              color: "rgba(255, 255, 255, .3)",
-              circular: true
-            }
-          } */
+       
       };
 
     return (
