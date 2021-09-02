@@ -7,7 +7,7 @@
 
 ## Information
 
-The UK POLICE APP works with the [link](https://data.police.uk/docs/) API and allow users to search abot Stop and search and Crime in various Forces for last 3 years.
+The UK POLICE APP works with the [Police API](https://data.police.uk/docs/) and allows users to search about Stop and Search, and Crime in various Forces for the last 3 years.
 This app is created with React js,Bootstrap and Chart.js.
 
 ## Prerequisites
