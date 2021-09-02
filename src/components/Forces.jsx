@@ -30,17 +30,17 @@ const Forces = () => {
     },[])
 
     return (
-        <div>
-           
+        <div className="Forces">
 
             <Form value="submit" onSubmit={handleSubmit}>
-               <Form.Label><h2>Select Force (Required) </h2></Form.Label>
-                 <select onChange={handleChange}>
+                <Form.Label><h2><strong>Select Force (Required)</strong> </h2></Form.Label>
+                 <select onChange={handleChange} className="Force-select">
+                 <option value="" selected disabled hidden> Choose here </option>
                    {forces.map(force => 
                    <option key={force.id} value={force.id}>{force.name}</option>
                     )};
-                 </select>  
-            </Form> 
+                </select>  
+            </Form>  
 
                    
         </div>

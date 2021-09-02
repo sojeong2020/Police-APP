@@ -21,10 +21,11 @@ const Dates = () => {
    }
 
     return (
-        <div>
+        <div className="Dates">
              <Form value="submit" onSubmit={handleSubmit}>
-               <Form.Label><h2>Select Date (Required) </h2></Form.Label>
-                 <select onChange={handleChange}>
+               <Form.Label><h2><strong>Select Date (Required)</strong> </h2></Form.Label>
+                 <select onChange={handleChange} className="Date-select">
+                 <option value="" selected disabled hidden> Choose here </option>
                  <option value="2021-07">2021-07 </option>
                  <option value="2021-06">2021-06 </option>
                  <option value="2021-05">2021-05</option>
