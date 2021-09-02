@@ -19,7 +19,7 @@ This app is created with React js,Bootstrap and Chart.js.
 Fork the git repo
 
 ```
-git clone https://github.com/sojeong2020/app.git
+git clone https://github.com/sojeong2020/Police-APP.git
 ```
 
 To install all dependencies and packages
