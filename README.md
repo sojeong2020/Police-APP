@@ -2,8 +2,7 @@
 
 Visit the app! 
 
-<img src="/src/img/home1.png " width="250">  <img src="/src/img/crime.png" width="250"> <img src="/src/img/stop.png " width="250">
-
+ <img src="/src/img/crime.png" width="500"> 
 
 ## Information
 
