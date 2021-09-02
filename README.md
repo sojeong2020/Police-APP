@@ -1,12 +1,13 @@
 # UK POLICE APP
 
-Visit the app! 
+### Visit the app! :policeman:
 
- <img src="/src/img/crime.png" width="500"> 
+
+ <img src="/src/img/crime.png" width="600"> 
 
 ## Information
 
-The UK POLICE APP works with the [link] (https://data.police.uk/docs/) API and allow users to search abot Stop and search and Crime in various Forces for last 3 years.
+The UK POLICE APP works with the [link](https://data.police.uk/docs/) API and allow users to search abot Stop and search and Crime in various Forces for last 3 years.
 This app is created with React js,Bootstrap and Chart.js.
 
 ## Prerequisites
