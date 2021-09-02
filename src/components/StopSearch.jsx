@@ -8,11 +8,12 @@ const StopSearch = ({force,date}) => {
     
     return (
         <div>
-            <h3>I am radar.</h3>
+            <h1>Stop and search</h1>
+            <h2>Age range</h2>
             <RadarChart force={force} date={date}/>
-            <h3>I am pie.</h3>
+            <h2>Self defined ethnicity</h2>
             <PieChart force={force} date={date}/>
-            <h3>I am bar.</h3>
+            <h2>Outcome</h2>
             <BarChart force={force} date={date}/>
             
             
