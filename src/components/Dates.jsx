@@ -5,9 +5,7 @@ import  { Form }  from 'react-bootstrap';
 
 
 const Dates = () => {
-    /* const [date,setDate]=useState('')
-    console.log(date) */
-
+    
     const {setDate} = useContext(ForceContext);
 
 

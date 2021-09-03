@@ -7,24 +7,20 @@ import { Bar } from "react-chartjs-2";
 const BarChartCrime = ({force,date}) => {
     const [chartData,setChartData]=useState({});
 
-    //console.log(chartData,"<<<< chartData from line chart!")
 
 
     useEffect(()=>{
         let types=[];
-        //console.log(types,"<<< types")
         
         let counts = {};
 
         getCrimesByForceDate(force.value,date.value).then((resultFromApi)=>{
-            //console.log(resultFromApi,"crime before iterating")
             
               resultFromApi.forEach(element => {
                   types.push(element.category);
               })
             
              types.forEach(x=>counts[x]=(counts[x] || 0)+1 );
-            // console.log(counts,"<<<<< conuts")
             
             setChartData({
                 labels: Object.keys(counts),
@@ -43,22 +39,11 @@ const BarChartCrime = ({force,date}) => {
         })
 },[force,date])
 
-/* const options = {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
-    },
-  }; */
+
 
   const options = {
     indexAxis: 'y',
-    // Elements options apply to all of the options unless overridden in a dataset
-    // In this case, we are setting the border of each horizontal bar to be 2px wide
+    
     elements: {
       bar: {
         borderWidth: 2,

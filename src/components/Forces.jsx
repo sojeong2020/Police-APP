@@ -6,9 +6,7 @@ import  { Form }  from 'react-bootstrap';
 
 const Forces = () => {
     const [forces,setForces]=useState([]);
-    //console.log(forces)
-    /* const [force, setForce]= useState('')
-    console.log(force) */
+    
 
     const {setForce} = useContext(ForceContext);
 

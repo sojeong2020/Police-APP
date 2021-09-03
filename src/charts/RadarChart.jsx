@@ -4,15 +4,12 @@ import { Radar } from 'react-chartjs-2';
 
 const RadarChart = ({force,date}) => {
     const [chartData,setChartData]=useState({});
-    //console.log(chartData,"<<<< chartData from radar!")
 
   useEffect(()=>{
       let age=[];
       let counts ={}
-      //console.log(counts,"<<< count from radar")
 
       getSearchesByForceDate(force.value,date.value).then((resultFromApi)=>{
-        //console.log(resultFromApi,"searches before iterating from radar")
         resultFromApi.forEach(element => {
             age.push(element.age_range);
         })
